@@ -1,0 +1,9 @@
+C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesiciones\bin\Debug\teoriaDesiciones.exe.config
+C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesiciones\bin\Debug\teoriaDesiciones.exe
+C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesiciones\bin\Debug\teoriaDesiciones.pdb
+C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesiciones\obj\Debug\teoriaDesiciones.csprojResolveAssemblyReference.cache
+C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesiciones\obj\Debug\teoriaDesiciones.Form1.resources
+C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesiciones\obj\Debug\teoriaDesiciones.Properties.Resources.resources
+C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesiciones\obj\Debug\teoriaDesiciones.csproj.GenerateResource.Cache
+C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesiciones\obj\Debug\teoriaDesiciones.exe
+C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesiciones\obj\Debug\teoriaDesiciones.pdb
