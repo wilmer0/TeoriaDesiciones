@@ -1,0 +1,9 @@
+C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesiciones\bin\Release\teoriaDesiciones.dll.config
+C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesiciones\bin\Release\teoriaDesiciones.dll
+C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesiciones\bin\Release\teoriaDesiciones.pdb
+C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesiciones\obj\Release\teoriaDesiciones.Form1.resources
+C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesiciones\obj\Release\teoriaDesiciones.Properties.Resources.resources
+C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesiciones\obj\Release\teoriaDesiciones.views.ventana_generar_data.resources
+C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesiciones\obj\Release\teoriaDesiciones.csproj.GenerateResource.Cache
+C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesiciones\obj\Release\teoriaDesiciones.dll
+C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesiciones\obj\Release\teoriaDesiciones.pdb
