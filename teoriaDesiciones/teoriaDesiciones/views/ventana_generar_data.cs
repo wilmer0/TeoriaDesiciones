@@ -34,6 +34,7 @@ namespace teoriaDesiciones.views
 
         public void loadVentana()
         {
+            modeloPrimerosDatos.entradaDatos();
             getPeriodo();
         }
 
