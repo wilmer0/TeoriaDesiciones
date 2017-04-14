@@ -35,19 +35,40 @@ namespace teoriaDesiciones.model
             utilidades.ejecutarcomando_mysql(sql);
 
             //causas
-            sql = "insert into causa(id,causa) values('1','maquina fuera de servicio');";
+            sql = "insert into causa(id,causa) values('1','falla energia electrica');";
             utilidades.ejecutarcomando_mysql(sql);
-            sql = "insert into causa(id,causa) values('2','falla energia electrica');";
+            sql = "insert into causa(id,causa) values('2','falta de materia prima');";
             utilidades.ejecutarcomando_mysql(sql);
-            sql = "insert into causa(id,causa) values('3','falta de materia prima');";
+            sql = "insert into causa(id,causa) values('3','operadores no disponibles');";
             utilidades.ejecutarcomando_mysql(sql);
-            sql = "insert into causa(id,causa) values('4','operadores no disponibles');";
+            sql = "insert into causa(id,causa) values('4','falla pieza de maquina');";
             utilidades.ejecutarcomando_mysql(sql);
-            sql = "insert into causa(id,causa) values('5','falla pieza de maquina');";
-            utilidades.ejecutarcomando_mysql(sql);
-            sql = "insert into causa(id,causa) values('6','incapacitacion de empleado accidente maquina');";
+            sql = "insert into causa(id,causa) values('5','incapacitacion de empleado accidente maquina');";
             utilidades.ejecutarcomando_mysql(sql);
             
+
+            //meses
+            for (int f = 1; f <= 12; f++)
+            {
+                sql = "insert into mes(mes) values('"+f+"');";
+                utilidades.ejecutarcomando_mysql(sql);
+            }
+
+            //periodo
+            for (int f = 2015; f <= 2020; f++)
+            {
+                sql = "insert into periodo(periodo) values('"+f+"');";
+                utilidades.ejecutarcomando_mysql(sql);
+            }
+
+            //problemas
+            sql = "insert into problema(id,problema) values('1','maquina se detiene');";
+            utilidades.ejecutarcomando_mysql(sql);
+
+
+
+
+
 
         }
     }
