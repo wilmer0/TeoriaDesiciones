@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ventana_generar_data));
-            this.periodoInicialText = new System.Windows.Forms.ComboBox();
-            this.periodoFinalText = new System.Windows.Forms.ComboBox();
+            this.periodoInicialCombo = new System.Windows.Forms.ComboBox();
+            this.periodoFinalCombo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -39,23 +39,23 @@
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // periodoInicialText
+            // periodoInicialCombo
             // 
-            this.periodoInicialText.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.periodoInicialText.FormattingEnabled = true;
-            this.periodoInicialText.Location = new System.Drawing.Point(148, 263);
-            this.periodoInicialText.Name = "periodoInicialText";
-            this.periodoInicialText.Size = new System.Drawing.Size(121, 21);
-            this.periodoInicialText.TabIndex = 0;
+            this.periodoInicialCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.periodoInicialCombo.FormattingEnabled = true;
+            this.periodoInicialCombo.Location = new System.Drawing.Point(148, 263);
+            this.periodoInicialCombo.Name = "periodoInicialCombo";
+            this.periodoInicialCombo.Size = new System.Drawing.Size(121, 21);
+            this.periodoInicialCombo.TabIndex = 0;
             // 
-            // periodoFinalText
+            // periodoFinalCombo
             // 
-            this.periodoFinalText.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.periodoFinalText.FormattingEnabled = true;
-            this.periodoFinalText.Location = new System.Drawing.Point(304, 264);
-            this.periodoFinalText.Name = "periodoFinalText";
-            this.periodoFinalText.Size = new System.Drawing.Size(121, 21);
-            this.periodoFinalText.TabIndex = 1;
+            this.periodoFinalCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.periodoFinalCombo.FormattingEnabled = true;
+            this.periodoFinalCombo.Location = new System.Drawing.Point(304, 264);
+            this.periodoFinalCombo.Name = "periodoFinalCombo";
+            this.periodoFinalCombo.Size = new System.Drawing.Size(121, 21);
+            this.periodoFinalCombo.TabIndex = 1;
             // 
             // label1
             // 
@@ -106,6 +106,7 @@
             this.button2.TabIndex = 6;
             this.button2.Text = "Generar Data";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -129,8 +130,8 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.periodoFinalText);
-            this.Controls.Add(this.periodoInicialText);
+            this.Controls.Add(this.periodoFinalCombo);
+            this.Controls.Add(this.periodoInicialCombo);
             this.Name = "ventana_generar_data";
             this.Text = "ventana_generar_data";
             this.ResumeLayout(false);
@@ -140,8 +141,8 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox periodoInicialText;
-        private System.Windows.Forms.ComboBox periodoFinalText;
+        private System.Windows.Forms.ComboBox periodoInicialCombo;
+        private System.Windows.Forms.ComboBox periodoFinalCombo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;

@@ -20,7 +20,7 @@ namespace teoriaDesiciones
                 {
                     return null;
                 }
-                MySqlConnection conn = new MySqlConnection("server=localhost;uid=root;pwd=wilmerlomas1;database=teoria_desicions;");
+                MySqlConnection conn = new MySqlConnection("server=localhost;uid=root;pwd=wilmerlomas1;database=teoria_desiciones;");
                 MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
                 DataSet ds = new DataSet();
                 da.Fill(ds);

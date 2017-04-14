@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using teoriaDesiciones.views;
 
 namespace teoriaDesiciones
 {
@@ -19,7 +20,9 @@ namespace teoriaDesiciones
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Esto es una prueba");
+            ventana_generar_data ventana=new ventana_generar_data();
+            ventana.Owner = this;
+            ventana.ShowDialog();
         }
     }
 }
