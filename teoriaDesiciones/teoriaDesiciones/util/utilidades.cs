@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
@@ -29,6 +30,21 @@ namespace teoriaDesiciones
             {
                 MessageBox.Show("Fallo conectando al server.:" + ex.ToString());
                 return null;
+            }
+        }
+
+        public Int32 getNumeroRandom(Int32 inicio, Int32 final)
+        {
+            try
+            {
+                //geera un numero random entre un rango de numero inicial y numero final
+                Random random = new Random();
+                //Thread.Sleep(5);
+                return random.Next(inicio, final + 1);
+            }
+            catch (Exception)
+            {
+                return -1;
             }
         }
     }

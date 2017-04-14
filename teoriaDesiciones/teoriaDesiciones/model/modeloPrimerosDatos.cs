@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
@@ -35,15 +36,15 @@ namespace teoriaDesiciones.model
             utilidades.ejecutarcomando_mysql(sql);
 
             //causas
-            sql = "insert into causa(id,causa) values('1','falla energia electrica');";
+            sql = "insert into causa(id,causa,probabilidad) values('1','falla energia electrica','10');";
             utilidades.ejecutarcomando_mysql(sql);
-            sql = "insert into causa(id,causa) values('2','falta de materia prima');";
+            sql = "insert into causa(id,causa,probabilidad) values('2','falta de materia prima','25');";
             utilidades.ejecutarcomando_mysql(sql);
-            sql = "insert into causa(id,causa) values('3','operadores no disponibles');";
+            sql = "insert into causa(id,causa,probabilidad) values('3','operadores no disponibles','30');";
             utilidades.ejecutarcomando_mysql(sql);
-            sql = "insert into causa(id,causa) values('4','falla pieza de maquina');";
+            sql = "insert into causa(id,causa,probabilidad) values('4','falla pieza de maquina','20');";
             utilidades.ejecutarcomando_mysql(sql);
-            sql = "insert into causa(id,causa) values('5','incapacitacion de empleado accidente maquina');";
+            sql = "insert into causa(id,causa,probabilidad) values('5','incapacitacion de empleado accidente maquina','15');";
             utilidades.ejecutarcomando_mysql(sql);
             
 
@@ -65,8 +66,18 @@ namespace teoriaDesiciones.model
             sql = "insert into problema(id,problema) values('1','maquina se detiene');";
             utilidades.ejecutarcomando_mysql(sql);
 
-
-
+            //problema vs causa
+            sql = "select id,causa,probabilidad from causa;";
+            DataSet ds = utilidades.ejecutarcomando_mysql(sql);
+            foreach (DataRow row in ds.Tables[0].Rows)
+            {
+                if (utilidades.getNumeroRandom(1, 100) <= Convert.ToInt32(row[2]))
+                {
+                    //se inserta la causa del problema
+                    sql = "insert into problema_vs_causa(id_problema,id_causa) values('1','"+row[0].ToString()+"');";
+                    utilidades.ejecutarcomando_mysql(sql);
+                }
+            }
 
 
 
