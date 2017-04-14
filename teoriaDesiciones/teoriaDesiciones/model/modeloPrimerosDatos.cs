@@ -95,7 +95,7 @@ namespace teoriaDesiciones.model
                         contadorProblemas++;
                     }
                 }
-            } while (contadorProblemas < 50);
+            } while (contadorProblemas < utilidades.getNumeroRandom(1,100));
         }
     }
 }
