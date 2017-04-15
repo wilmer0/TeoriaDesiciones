@@ -16,6 +16,7 @@ namespace teoriaDesiciones
         public decimal promedioHoras { get; set; }
         public decimal promedioMinutos { get; set; }
         public string nota { get; set; }
+        public int idCausa { get; set; }
         public string causa { get; set; }
         public decimal cantidadProduccion { get; set; }
     }

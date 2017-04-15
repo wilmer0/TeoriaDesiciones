@@ -23,6 +23,7 @@ namespace teoriaDesiciones.model
                 produccion produccion = new produccion();
                 reporte_detalle_parada reporteDetalle=new reporte_detalle_parada();
                 List<reporte_detalle_parada> listaDetalle=new List<reporte_detalle_parada>();
+                causa causa=new causa();
 
                 //obteniendo la lista de produccion
                 listaProduccion = produccion.getListaProduccion();
@@ -72,7 +73,8 @@ namespace teoriaDesiciones.model
                     reporteDetalle.promedioHoras = Math.Round((listaParada.Where(p => p.Periodo == x.periodo && p.mes == x.mes).Average(v => v.tiempoHoras)),4);
                     reporteDetalle.promedioMinutos = Math.Round(listaParada.Where(p => p.Periodo == x.periodo && p.mes == x.mes).Average(v => v.tiempoMinutos), 4);
                     reporteDetalle.nota = listaProduccion.Where(p => p.periodo == x.periodo && p.mes == x.mes).FirstOrDefault().nota;
-                    reporteDetalle.causa = "";
+                    reporteDetalle.idCausa = listaParada.Where(p => p.Periodo == x.periodo && p.mes == x.mes).FirstOrDefault().idCausa;
+                    reporteDetalle.causa = causa.getNombreCaudaById(reporteDetalle.idCausa);
                     reporteDetalle.cantidadProduccion = x.cantidad;
                     listaDetalle.Add(reporteDetalle);
                 }
