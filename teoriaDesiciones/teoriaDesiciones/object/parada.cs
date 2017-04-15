@@ -25,7 +25,7 @@ namespace teoriaDesiciones
             List<parada> lista = new List<parada>();
             parada parada = new parada();
 
-            string sql = "select p.id,p.id_causa,p.tiempo_horas,p.tiempo_minutos,p.id_maquina,p.id_periodo,p.mes,mt.tipo from parada p join maquina_tipo mt;";
+            string sql = "select p.id,p.id_causa,p.tiempo_horas,p.tiempo_minutos,p.id_maquina,p.id_periodo,p.mes,mt.tipo from parada p, maquina_tipo mt where p.id_maquina=mt.id order by p.id_periodo;";
             DataSet ds = utilidades.ejecutarcomando_mysql(sql);
             foreach (DataRow row in ds.Tables[0].Rows)
             {

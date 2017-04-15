@@ -1133,6 +1133,7 @@
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
+                                <Format>#,0.00</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1149,7 +1150,6 @@
                         </Border>
                         <TopBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
                           <Width>1pt</Width>
                         </TopBorder>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -1213,6 +1213,7 @@
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
+                                <Format>#,0.00</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1229,7 +1230,6 @@
                         </Border>
                         <TopBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
                           <Width>1pt</Width>
                         </TopBorder>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -2260,15 +2260,15 @@
             <ChartMember>
               <Group Name="Chart5_CategoryGroup">
                 <GroupExpressions>
-                  <GroupExpression>=Fields!idTipoMaquina.Value</GroupExpression>
+                  <GroupExpression>=Fields!maquina.Value</GroupExpression>
                 </GroupExpressions>
               </Group>
               <SortExpressions>
                 <SortExpression>
-                  <Value>=Fields!idTipoMaquina.Value</Value>
+                  <Value>=Fields!maquina.Value</Value>
                 </SortExpression>
               </SortExpressions>
-              <Label>=Fields!idTipoMaquina.Value</Label>
+              <Label>=Fields!maquina.Value</Label>
             </ChartMember>
           </ChartMembers>
         </ChartCategoryHierarchy>
