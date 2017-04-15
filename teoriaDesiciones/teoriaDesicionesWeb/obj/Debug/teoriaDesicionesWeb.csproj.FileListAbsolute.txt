@@ -1,0 +1,8 @@
+C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesicionesWeb\obj\Debug\teoriaDesicionesWeb.csprojResolveAssemblyReference.cache
+C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesicionesWeb\obj\Debug\Page1.baml
+C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesicionesWeb\obj\Debug\Page1.g.cs
+C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesicionesWeb\obj\Debug\App.g.cs
+C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesicionesWeb\obj\Debug\teoriaDesicionesWeb_MarkupCompile.cache
+C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesicionesWeb\obj\Debug\teoriaDesicionesWeb.g.resources
+C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesicionesWeb\obj\Debug\teoriaDesicionesWeb.Properties.Resources.resources
+C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesicionesWeb\obj\Debug\teoriaDesicionesWeb.csproj.GenerateResource.Cache
