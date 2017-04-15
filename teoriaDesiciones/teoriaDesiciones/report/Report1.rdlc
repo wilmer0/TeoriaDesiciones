@@ -3106,6 +3106,10 @@
           <DataField>idTipoMaquina</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
+        <Field Name="maquina">
+          <DataField>maquina</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="mes">
           <DataField>mes</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
