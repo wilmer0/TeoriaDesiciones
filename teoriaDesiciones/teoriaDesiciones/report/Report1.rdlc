@@ -2,43 +2,11 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
-      <Textbox Name="Textbox13">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>TOTAL PARADAS:</Value>
-                <Style>
-                  <FontSize>8pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox9</rd:DefaultName>
-        <Top>0.06944in</Top>
-        <Left>0.13417in</Left>
-        <Height>0.25in</Height>
-        <Width>1.08333in</Width>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
       <Tablix Name="Tablix2">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.08333in</Width>
+              <Width>0.60889in</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>0.74528in</Width>
@@ -59,7 +27,7 @@
               <Width>0.77083in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.83237in</Width>
+              <Width>2.31597in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -82,7 +50,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox16</rd:DefaultName>
@@ -135,7 +105,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox30</rd:DefaultName>
@@ -181,7 +153,21 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cantidad Produccion</Value>
+                              <Value>CANTIDAD</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>PRODUCCION</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -520,7 +506,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>periodo</rd:DefaultName>
@@ -552,7 +540,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>mesNombre</rd:DefaultName>
@@ -581,6 +571,7 @@
                               <Value>=Fields!cantidadProduccion.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
+                                <Format>#,0.00</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -619,7 +610,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Center</TextAlign>
+                            <TextAlign>Right</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -792,7 +783,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox42</rd:DefaultName>
@@ -824,7 +817,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox44</rd:DefaultName>
@@ -856,7 +851,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox7</rd:DefaultName>
@@ -1059,7 +1056,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox34</rd:DefaultName>
@@ -1098,7 +1097,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Left</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -1138,7 +1137,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Center</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -1391,120 +1390,16 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>reporte_detalle</DataSetName>
-        <Top>0.38889in</Top>
+        <Top>0.08681in</Top>
         <Left>0.13417in</Left>
         <Height>1.16667in</Height>
-        <Width>8.06375in</Width>
-        <ZIndex>1</ZIndex>
+        <Width>8.07291in</Width>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Tablix>
-      <Textbox Name="Textbox50">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=Sum(Fields!cantidadParadas.Value, "reporte_encabezado")</Value>
-                <Style>
-                  <FontSize>8pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Left</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox46</rd:DefaultName>
-        <Top>0.17639cm</Top>
-        <Left>3.09245cm</Left>
-        <Height>0.635cm</Height>
-        <Width>1.62596cm</Width>
-        <ZIndex>2</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox14">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>PROMEDIO VENTAS MENSUAL:</Value>
-                <Style>
-                  <FontSize>8pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox9</rd:DefaultName>
-        <Top>0.06944in</Top>
-        <Left>2.60764in</Left>
-        <Height>0.25in</Height>
-        <Width>1.7257in</Width>
-        <ZIndex>3</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox52">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=Sum(Fields!produccionPromedioMensual.Value, "reporte_encabezado")</Value>
-                <Style>
-                  <FontSize>8pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Left</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox46</rd:DefaultName>
-        <Top>0.17639cm</Top>
-        <Left>11.00668cm</Left>
-        <Height>0.635cm</Height>
-        <Width>1.99883cm</Width>
-        <ZIndex>4</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
       <Chart Name="Chart1">
         <ChartCategoryHierarchy>
           <ChartMembers>
@@ -1785,11 +1680,11 @@
           </Style>
         </ChartNoDataMessage>
         <DataSetName>reporte_detalle</DataSetName>
-        <Top>1.75in</Top>
+        <Top>1.375in</Top>
         <Left>0.13417in</Left>
         <Height>2in</Height>
         <Width>8.06375in</Width>
-        <ZIndex>5</ZIndex>
+        <ZIndex>1</ZIndex>
         <Style>
           <Border>
             <Color>LightGrey</Color>
@@ -2065,11 +1960,11 @@
           </Style>
         </ChartNoDataMessage>
         <DataSetName>reporte_detalle</DataSetName>
-        <Top>3.81945in</Top>
-        <Left>4.27431in</Left>
+        <Top>3.40278in</Top>
+        <Left>4.28347in</Left>
         <Height>2.58333in</Height>
-        <Width>3.92361in</Width>
-        <ZIndex>6</ZIndex>
+        <Width>3.91445in</Width>
+        <ZIndex>2</ZIndex>
         <Style>
           <Border>
             <Color>LightGrey</Color>
@@ -2345,11 +2240,11 @@
           </Style>
         </ChartNoDataMessage>
         <DataSetName>reporte_detalle</DataSetName>
-        <Top>3.81945in</Top>
+        <Top>3.40278in</Top>
         <Left>0.13417in</Left>
         <Height>2.58333in</Height>
-        <Width>3.92361in</Width>
-        <ZIndex>7</ZIndex>
+        <Width>3.93277in</Width>
+        <ZIndex>3</ZIndex>
         <Style>
           <Border>
             <Color>LightGrey</Color>
@@ -2359,38 +2254,6 @@
           <BackgroundGradientType>None</BackgroundGradientType>
         </Style>
       </Chart>
-      <Textbox Name="Textbox6">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>--&gt; 1.00%</Value>
-                <Style>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox6</rd:DefaultName>
-        <Top>0.06944in</Top>
-        <Left>5.12028in</Left>
-        <Height>0.25in</Height>
-        <Width>1in</Width>
-        <ZIndex>8</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
       <Chart Name="Chart5">
         <ChartCategoryHierarchy>
           <ChartMembers>
@@ -2658,11 +2521,11 @@
           </Style>
         </ChartNoDataMessage>
         <DataSetName>reporte_detalle_parada</DataSetName>
-        <Top>6.47222in</Top>
+        <Top>6.05555in</Top>
         <Left>0.13417in</Left>
-        <Height>2.91667in</Height>
+        <Height>2.58334in</Height>
         <Width>8.06375in</Width>
-        <ZIndex>9</ZIndex>
+        <ZIndex>4</ZIndex>
         <Style>
           <Border>
             <Color>LightGrey</Color>
@@ -2679,7 +2542,7 @@
   <Width>8.45708in</Width>
   <Page>
     <PageHeader>
-      <Height>1.655in</Height>
+      <Height>1.35292in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -2688,7 +2551,7 @@
           <Value>Sigma_Alimentos_logotipo</Value>
           <Sizing>FitProportional</Sizing>
           <Left>0.25917in</Left>
-          <Height>0.79167in</Height>
+          <Height>0.61111in</Height>
           <Width>1.28125in</Width>
           <Style>
             <Border>
@@ -2715,10 +2578,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>0.86111in</Top>
-          <Left>0.25917in</Left>
+          <Top>0.36111in</Top>
+          <Left>1.60986in</Left>
           <Height>0.25in</Height>
-          <Width>7.93875in</Width>
+          <Width>5.26514in</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -2781,7 +2644,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox9</rd:DefaultName>
-          <Top>1.18056in</Top>
+          <Top>0.68056in</Top>
           <Left>0.25917in</Left>
           <Height>0.25in</Height>
           <Width>1.28125in</Width>
@@ -2813,8 +2676,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox9</rd:DefaultName>
-          <Top>1.18056in</Top>
-          <Left>2.60986in</Left>
+          <Top>0.94445in</Top>
+          <Left>0.25917in</Left>
           <Height>0.25in</Height>
           <Width>1.28125in</Width>
           <ZIndex>4</ZIndex>
@@ -2845,7 +2708,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox11</rd:DefaultName>
-          <Top>1.18056in</Top>
+          <Top>0.68056in</Top>
           <Left>1.54042in</Left>
           <Height>0.25in</Height>
           <Width>1in</Width>
@@ -2877,8 +2740,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox11</rd:DefaultName>
-          <Top>1.18056in</Top>
-          <Left>3.89111in</Left>
+          <Top>0.94445in</Top>
+          <Left>1.54042in</Left>
           <Height>0.25in</Height>
           <Width>1in</Width>
           <ZIndex>6</ZIndex>
@@ -2893,7 +2756,7 @@
           </Style>
         </Textbox>
         <Line Name="Line1">
-          <Top>1.55556in</Top>
+          <Top>1.30556in</Top>
           <Left>0.25917in</Left>
           <Height>0in</Height>
           <Width>7.93875in</Width>
@@ -2927,6 +2790,177 @@
           <Height>0.25in</Height>
           <Width>1.33208in</Width>
           <ZIndex>8</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox13">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>TOTAL PARADAS:</Value>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox9</rd:DefaultName>
+          <Top>0.68056in</Top>
+          <Left>6.43723in</Left>
+          <Height>0.25in</Height>
+          <Width>1.08333in</Width>
+          <ZIndex>9</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox50">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Sum(Fields!cantidadParadas.Value, "reporte_encabezado")</Value>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Left</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox46</rd:DefaultName>
+          <Top>1.72862cm</Top>
+          <Left>19.10222cm</Left>
+          <Height>0.635cm</Height>
+          <Width>1.62596cm</Width>
+          <ZIndex>10</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox14">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>PROMEDIO VENTAS MENSUAL:</Value>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Right</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox9</rd:DefaultName>
+          <Top>0.94444in</Top>
+          <Left>4.2557in</Left>
+          <Height>0.25in</Height>
+          <Width>2.04862in</Width>
+          <ZIndex>11</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox52">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Sum(Fields!produccionPromedioMensual.Value, "reporte_encabezado")</Value>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <Format>#,0.00</Format>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Left</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox46</rd:DefaultName>
+          <Top>2.3989cm</Top>
+          <Left>16.01296cm</Left>
+          <Height>0.635cm</Height>
+          <Width>2.17522cm</Width>
+          <ZIndex>12</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox6">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>--&gt; 1.00%</Value>
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox6</rd:DefaultName>
+          <Top>0.94444in</Top>
+          <Left>7.1607in</Left>
+          <Height>0.25in</Height>
+          <Width>1in</Width>
+          <ZIndex>13</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
