@@ -96,6 +96,10 @@ namespace teoriaDesiciones.model
                 ReportDataSource reporteDetalle1 = new ReportDataSource("reporte_detalle", listaDetalle);
                 listaReportDataSource.Add(reporteDetalle1);
 
+                //llenar detalle parada
+                ReportDataSource reporteDetalle2 = new ReportDataSource("reporte_detalle_parada", listaParada);
+                listaReportDataSource.Add(reporteDetalle2);
+
                 List<ReportParameter> ListaReportParameter = new List<ReportParameter>();
                 VisorReporteComun ventana = new VisorReporteComun(reporte, listaReportDataSource, ListaReportParameter);
                 ventana.ShowDialog();
