@@ -105,40 +105,40 @@ namespace teoriaDesiciones.model
             //sql = "truncate table parada;";
             //utilidades.ejecutarcomando_mysql(sql);
             ////recorriendo los periodos
-            //for(int s=0;s<50;s++)
-            //for (int p = 2015; p <= 2016; p++)
-            //{
-            //    for (int m = 1; m <= 12; m++)
+            //for (int s = 0; s < 50; s++)
+            //    for (int p = 2015; p <= 2016; p++)
             //    {
-            //        //recorriendo los meses
-            //        sql = "select id,causa,probabilidad from causa;";
-            //        DataSet dsCausa = utilidades.ejecutarcomando_mysql(sql);
-            //        //recorriendo cada tipo de maquina
-            //        sql = "select id,tipo,cantidad from maquina_tipo;";
-            //        DataSet dsMaquina = utilidades.ejecutarcomando_mysql(sql);
-            //        foreach (DataRow rowMaquina in dsMaquina.Tables[0].Rows)
+            //        for (int m = 1; m <= 12; m++)
             //        {
-            //            //recorriendo la cantidad de este tipo de maquinas
-            //            for (int c = 0; c < Convert.ToInt32(rowMaquina[2]);c++)
+            //            //recorriendo los meses
+            //            sql = "select id,causa,probabilidad from causa;";
+            //            DataSet dsCausa = utilidades.ejecutarcomando_mysql(sql);
+            //            //recorriendo cada tipo de maquina
+            //            sql = "select id,tipo,cantidad from maquina_tipo;";
+            //            DataSet dsMaquina = utilidades.ejecutarcomando_mysql(sql);
+            //            foreach (DataRow rowMaquina in dsMaquina.Tables[0].Rows)
             //            {
-            //                //analizando si ocurrio un problema en la maquina actual
-            //                foreach (DataRow row in dsCausa.Tables[0].Rows)
+            //                //recorriendo la cantidad de este tipo de maquinas
+            //                for (int c = 0; c < Convert.ToInt32(rowMaquina[2]); c++)
             //                {
-            //                    if (utilidades.getNumeroRandom(1, 100) <= Convert.ToInt32(row[2]))
+            //                    //analizando si ocurrio un problema en la maquina actual
+            //                    foreach (DataRow rowCausa in dsCausa.Tables[0].Rows)
             //                    {
-            //                        double tiempoHoras = 0;
-            //                        double tiempoMinutos = 0;
-            //                        tiempoMinutos = utilidades.getNumeroRandom(5, 60);
-            //                        tiempoHoras = Math.Round((tiempoMinutos / 60), 2);
-            //                        sql = "insert into parada(id_problema,tiempo_horas,tiempo_minutos,id_maquina,id_periodo,mes) values('1','" + tiempoHoras + "','" + tiempoMinutos + "','"+rowMaquina[0].ToString()+"','" + p + "','" + m + "');";
-            //                        utilidades.ejecutarcomando_mysql(sql);
+            //                        if (utilidades.getNumeroRandom(1, 100) <= Convert.ToInt32(rowCausa[2]))
+            //                        {
+            //                            double tiempoHoras = 0;
+            //                            double tiempoMinutos = 0;
+            //                            tiempoMinutos = utilidades.getNumeroRandom(5, 60);
+            //                            tiempoHoras = Math.Round((tiempoMinutos / 60), 2);
+            //                            sql = "insert into parada(id_causa,tiempo_horas,tiempo_minutos,id_maquina,id_periodo,mes) values('"+rowCausa[0].ToString()+"','" + tiempoHoras + "','" + tiempoMinutos + "','" + rowMaquina[0].ToString() + "','" + p + "','" + m + "');";
+            //                            utilidades.ejecutarcomando_mysql(sql);
+            //                        }
             //                    }
             //                }
             //            }
+
             //        }
-                    
             //    }
-            //}
             #endregion
 
 

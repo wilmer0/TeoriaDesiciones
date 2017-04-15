@@ -24,6 +24,7 @@ namespace teoriaDesiciones.views
 
         //modelos
         modeloPrimerosDatos modeloPrimerosDatos=new modeloPrimerosDatos();
+        modeloReporte modeloReporte=new modeloReporte();
 
         //variables
         private int periodoInicial = 0;
@@ -142,6 +143,13 @@ namespace teoriaDesiciones.views
         private void ventana_generar_data_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            periodoInicial = Convert.ToInt32(periodoInicialCombo.Text);
+            periodoFinal = Convert.ToInt32(periodoFinalCombo.Text);
+            modeloReporte.GetReporte(periodoInicial,periodoFinal);
         }
     }
 }
