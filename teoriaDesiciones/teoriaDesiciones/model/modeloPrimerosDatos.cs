@@ -78,24 +78,71 @@ namespace teoriaDesiciones.model
             //utilidades.ejecutarcomando_mysql(sql);
 
             //problema vs causa
-            sql = "truncate table problema_vs_causa";
-            utilidades.ejecutarcomando_mysql(sql);
-            sql = "select id,causa,probabilidad from causa;";
-            DataSet ds = utilidades.ejecutarcomando_mysql(sql);
-            int contadorProblemas = 0;
-            do
-            {
-                foreach (DataRow row in ds.Tables[0].Rows)
-                {
-                    if (utilidades.getNumeroRandom(1,100) <= Convert.ToInt32(row[2]))
-                    {
-                        //se inserta la causa del problema
-                        sql = "insert into problema_vs_causa(id_problema,id_causa) values('1','" + row[0].ToString() +"');";
-                        utilidades.ejecutarcomando_mysql(sql);
-                        contadorProblemas++;
-                    }
-                }
-            } while (contadorProblemas < utilidades.getNumeroRandom(1,100));
+            //sql = "truncate table problema_vs_causa";
+            //utilidades.ejecutarcomando_mysql(sql);
+            //sql = "select id,causa,probabilidad from causa;";
+            //DataSet ds = utilidades.ejecutarcomando_mysql(sql);
+            //int contadorProblemas = 0;
+            //do
+            //{
+            //    foreach (DataRow row in ds.Tables[0].Rows)
+            //    {
+            //        if (utilidades.getNumeroRandom(1,100) <= Convert.ToInt32(row[2]))
+            //        {
+            //            //se inserta la causa del problema
+            //            sql = "insert into problema_vs_causa(id_problema,id_causa) values('1','" + row[0].ToString() +"');";
+            //            utilidades.ejecutarcomando_mysql(sql);
+            //            contadorProblemas++;
+            //        }
+            //    }
+            //} while (contadorProblemas < utilidades.getNumeroRandom(1,100));
+
+
+            
+            //insertando las paradas
+            #region
+
+            //sql = "truncate table parada;";
+            //utilidades.ejecutarcomando_mysql(sql);
+            ////recorriendo los periodos
+            //for(int s=0;s<50;s++)
+            //for (int p = 2015; p <= 2016; p++)
+            //{
+            //    for (int m = 1; m <= 12; m++)
+            //    {
+            //        //recorriendo los meses
+            //        sql = "select id,causa,probabilidad from causa;";
+            //        DataSet dsCausa = utilidades.ejecutarcomando_mysql(sql);
+            //        //recorriendo cada tipo de maquina
+            //        sql = "select id,tipo,cantidad from maquina_tipo;";
+            //        DataSet dsMaquina = utilidades.ejecutarcomando_mysql(sql);
+            //        foreach (DataRow rowMaquina in dsMaquina.Tables[0].Rows)
+            //        {
+            //            //recorriendo la cantidad de este tipo de maquinas
+            //            for (int c = 0; c < Convert.ToInt32(rowMaquina[2]);c++)
+            //            {
+            //                //analizando si ocurrio un problema en la maquina actual
+            //                foreach (DataRow row in dsCausa.Tables[0].Rows)
+            //                {
+            //                    if (utilidades.getNumeroRandom(1, 100) <= Convert.ToInt32(row[2]))
+            //                    {
+            //                        double tiempoHoras = 0;
+            //                        double tiempoMinutos = 0;
+            //                        tiempoMinutos = utilidades.getNumeroRandom(5, 60);
+            //                        tiempoHoras = Math.Round((tiempoMinutos / 60), 2);
+            //                        sql = "insert into parada(id_problema,tiempo_horas,tiempo_minutos,id_maquina,id_periodo,mes) values('1','" + tiempoHoras + "','" + tiempoMinutos + "','"+rowMaquina[0].ToString()+"','" + p + "','" + m + "');";
+            //                        utilidades.ejecutarcomando_mysql(sql);
+            //                    }
+            //                }
+            //            }
+            //        }
+                    
+            //    }
+            //}
+            #endregion
+
+
+
         }
     }
 }

@@ -43,6 +43,18 @@
             // 
             this.periodoInicialCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.periodoInicialCombo.FormattingEnabled = true;
+            this.periodoInicialCombo.Items.AddRange(new object[] {
+            "2010",
+            "2011",
+            "2012",
+            "2013",
+            "2014",
+            "2015",
+            "2016",
+            "2017",
+            "2018",
+            "2019",
+            "2020"});
             this.periodoInicialCombo.Location = new System.Drawing.Point(148, 263);
             this.periodoInicialCombo.Name = "periodoInicialCombo";
             this.periodoInicialCombo.Size = new System.Drawing.Size(121, 21);
@@ -52,10 +64,23 @@
             // 
             this.periodoFinalCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.periodoFinalCombo.FormattingEnabled = true;
+            this.periodoFinalCombo.Items.AddRange(new object[] {
+            "2010",
+            "2011",
+            "2012",
+            "2013",
+            "2014",
+            "2015",
+            "2016",
+            "2017",
+            "2018",
+            "2019",
+            "2020"});
             this.periodoFinalCombo.Location = new System.Drawing.Point(304, 264);
             this.periodoFinalCombo.Name = "periodoFinalCombo";
             this.periodoFinalCombo.Size = new System.Drawing.Size(121, 21);
             this.periodoFinalCombo.TabIndex = 1;
+            this.periodoFinalCombo.SelectedIndexChanged += new System.EventHandler(this.periodoFinalCombo_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -132,8 +157,12 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.periodoFinalCombo);
             this.Controls.Add(this.periodoInicialCombo);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ventana_generar_data";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ventana_generar_data";
+            this.Load += new System.EventHandler(this.ventana_generar_data_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
