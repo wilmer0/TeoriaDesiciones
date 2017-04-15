@@ -13,6 +13,7 @@ namespace teoriaDesiciones
         public int idCausa { get; set; }
         public decimal tiempoHoras { get; set; }
         public decimal tiempoMinutos { get; set; }
+        public string maquina { get; set; }
         public int idTipoMaquina { get; set; }
         public int Periodo { get; set; }
         public int mes { get; set; }
@@ -24,7 +25,7 @@ namespace teoriaDesiciones
             List<parada> lista = new List<parada>();
             parada parada = new parada();
 
-            string sql = "select id,id_causa,tiempo_horas,tiempo_minutos,id_maquina,id_periodo,mes from parada;";
+            string sql = "select p.id,p.id_causa,p.tiempo_horas,p.tiempo_minutos,p.id_maquina,p.id_periodo,p.mes,mt.tipo from parada p join maquina_tipo mt;";
             DataSet ds = utilidades.ejecutarcomando_mysql(sql);
             foreach (DataRow row in ds.Tables[0].Rows)
             {
@@ -36,6 +37,7 @@ namespace teoriaDesiciones
                 parada.idTipoMaquina= Convert.ToInt32(row[4]);
                 parada.Periodo = Convert.ToInt32(row[5]);
                 parada.mes = Convert.ToInt32(row[6]);
+                parada.maquina= row[7].ToString();
 
                 lista.Add(parada);
             }
