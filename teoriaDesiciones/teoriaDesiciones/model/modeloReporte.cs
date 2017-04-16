@@ -12,7 +12,7 @@ namespace teoriaDesiciones.model
 {
     public class modeloReporte
     {
-        public void GetReporte(int periodoInicial,int periodoFinal)
+        public void GetReporte(int periodoInicial,int periodoFinal,bool reporteGeneral)
         {
             try
             {
@@ -87,7 +87,16 @@ namespace teoriaDesiciones.model
 
 
                 //llamando el reporte
-                String reporte = "teoriaDesiciones.report.Report1.rdlc";
+                String reporte = "";
+                if (reporteGeneral == true)
+                {
+                    reporte = "teoriaDesiciones.report.Report1.rdlc";
+                }
+                else
+                {
+                    reporte = "teoriaDesiciones.report.Report2.rdlc";
+                    listaParada = listaParada.OrderBy(x => x.id).ToList();
+                }
                 List<ReportDataSource> listaReportDataSource = new List<ReportDataSource>();
 
                 //encabezado
