@@ -29,6 +29,7 @@ namespace teoriaDesiciones.views
         //variables
         private int periodoInicial = 0;
         private int periodoFinal = 0;
+        private bool reporteGeneral = false;
 
 
 
@@ -149,7 +150,12 @@ namespace teoriaDesiciones.views
         {
             periodoInicial = Convert.ToInt32(periodoInicialCombo.Text);
             periodoFinal = Convert.ToInt32(periodoFinalCombo.Text);
-            modeloReporte.GetReporte(periodoInicial,periodoFinal);
+            if (radioButtonGeneral.Checked == true)
+            {
+                reporteGeneral = true;
+            }
+
+            modeloReporte.GetReporte(periodoInicial,periodoFinal,reporteGeneral);
         }
     }
 }

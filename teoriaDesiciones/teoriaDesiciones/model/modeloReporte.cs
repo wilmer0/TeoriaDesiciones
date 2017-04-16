@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Reporting.WinForms;
@@ -11,7 +12,7 @@ namespace teoriaDesiciones.model
 {
     public class modeloReporte
     {
-        public void GetReporte(int periodoInicial,int periodoFinal)
+        public void GetReporte(int periodoInicial,int periodoFinal,bool reporteGeneral)
         {
             try
             {
@@ -64,6 +65,7 @@ namespace teoriaDesiciones.model
                 //detalle
                 foreach (var x in listaProduccion)
                 {
+                    
                     reporteDetalle=new reporte_detalle_parada();
                     reporteDetalle.periodo = x.periodo;
                     reporteDetalle.mes = x.mes;
@@ -85,7 +87,16 @@ namespace teoriaDesiciones.model
 
 
                 //llamando el reporte
-                String reporte = "teoriaDesiciones.report.Report1.rdlc";
+                String reporte = "";
+                if (reporteGeneral == true)
+                {
+                    reporte = "teoriaDesiciones.report.Report1.rdlc";
+                }
+                else
+                {
+                    reporte = "teoriaDesiciones.report.Report2.rdlc";
+                    listaParada = listaParada.OrderBy(x => x.id).ToList();
+                }
                 List<ReportDataSource> listaReportDataSource = new List<ReportDataSource>();
 
                 //encabezado
