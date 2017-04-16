@@ -1960,7 +1960,7 @@
           </Style>
         </ChartNoDataMessage>
         <DataSetName>reporte_detalle</DataSetName>
-        <Top>3.40278in</Top>
+        <Top>3.90278in</Top>
         <Left>4.28347in</Left>
         <Height>2.58333in</Height>
         <Width>3.91445in</Width>
@@ -2240,7 +2240,7 @@
           </Style>
         </ChartNoDataMessage>
         <DataSetName>reporte_detalle</DataSetName>
-        <Top>3.40278in</Top>
+        <Top>3.90278in</Top>
         <Left>0.13417in</Left>
         <Height>2.58333in</Height>
         <Width>3.93277in</Width>
@@ -2521,7 +2521,7 @@
           </Style>
         </ChartNoDataMessage>
         <DataSetName>reporte_detalle_parada</DataSetName>
-        <Top>6.05555in</Top>
+        <Top>6.98958in</Top>
         <Left>0.13417in</Left>
         <Height>2.58334in</Height>
         <Width>8.06375in</Width>
@@ -2535,6 +2535,108 @@
           <BackgroundGradientType>None</BackgroundGradientType>
         </Style>
       </Chart>
+      <Textbox Name="Textbox5">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>NUMERO DE PARADAS AGRUPADOS POR LAS CAUSAS DE LAS MISMAS</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>3.44444in</Top>
+        <Left>0.13417in</Left>
+        <Height>0.42014in</Height>
+        <Width>3.93277in</Width>
+        <ZIndex>5</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox15">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>TIEMPO PROMEDIO TOTALES DE MINUTOS REGISTRADOS DE PARADAS POR CADA CAUSA</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>3.44445in</Top>
+        <Left>4.26515in</Left>
+        <Height>0.42014in</Height>
+        <Width>3.93277in</Width>
+        <ZIndex>6</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox18">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>TIEMPO EN MINUTOS REGISTRADOS QUE SE DETUVO CADA TIPO DE MAQUINA</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>6.625in</Top>
+        <Left>0.13417in</Left>
+        <Height>0.29514in</Height>
+        <Width>8.06375in</Width>
+        <ZIndex>7</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
     <Height>12.17708in</Height>
     <Style />
