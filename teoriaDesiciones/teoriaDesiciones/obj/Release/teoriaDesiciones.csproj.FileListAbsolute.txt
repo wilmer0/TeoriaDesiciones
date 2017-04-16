@@ -11,3 +11,4 @@ C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesicio
 C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesiciones\obj\Release\RdlCompile.compiled
 C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesiciones\obj\Release\teoriaDesiciones.exe
 C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesiciones\obj\Release\teoriaDesiciones.pdb
+C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesiciones\obj\Release\teoriaDesiciones.csprojResolveAssemblyReference.cache

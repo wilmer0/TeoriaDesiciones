@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Reporting.WinForms;
@@ -64,6 +65,7 @@ namespace teoriaDesiciones.model
                 //detalle
                 foreach (var x in listaProduccion)
                 {
+                    
                     reporteDetalle=new reporte_detalle_parada();
                     reporteDetalle.periodo = x.periodo;
                     reporteDetalle.mes = x.mes;

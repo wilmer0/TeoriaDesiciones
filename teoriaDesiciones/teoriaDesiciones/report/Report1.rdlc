@@ -1934,7 +1934,7 @@
         </ChartLegends>
         <ChartTitles>
           <ChartTitle Name="Default">
-            <Caption>TIEMPO MINUTOS PARADA POR CAUSAS</Caption>
+            <Caption>TIEMPO PROMEDIO (MINUTOS) PARADA POR CAUSAS</Caption>
             <Style>
               <BackgroundGradientType>None</BackgroundGradientType>
               <FontWeight>Bold</FontWeight>
