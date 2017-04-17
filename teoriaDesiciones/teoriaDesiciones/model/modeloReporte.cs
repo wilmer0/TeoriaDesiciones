@@ -65,7 +65,6 @@ namespace teoriaDesiciones.model
                 //detalle
                 foreach (var x in listaProduccion)
                 {
-                    
                     reporteDetalle=new reporte_detalle_parada();
                     reporteDetalle.periodo = x.periodo;
                     reporteDetalle.mes = x.mes;
@@ -114,8 +113,6 @@ namespace teoriaDesiciones.model
                 List<ReportParameter> ListaReportParameter = new List<ReportParameter>();
                 VisorReporteComun ventana = new VisorReporteComun(reporte, listaReportDataSource, ListaReportParameter);
                 ventana.ShowDialog();
-
-
             }
             catch (Exception ex)
             {
