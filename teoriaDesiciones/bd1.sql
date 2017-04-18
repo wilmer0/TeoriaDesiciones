@@ -16,6 +16,21 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `causa`
+--
+
+DROP TABLE IF EXISTS `causa`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `causa` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `causa` varchar(999) NOT NULL DEFAULT '',
+  `probabilidad` decimal(20,2) NOT NULL DEFAULT '0.00',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Dumping data for table `causa`
 --
 
@@ -24,6 +39,21 @@ LOCK TABLES `causa` WRITE;
 INSERT INTO `causa` VALUES (1,'falla energia electrica',10.00),(2,'falta de materia prima',15.00),(3,'operadores no disponibles',20.00),(4,'falla pieza de maquina',20.00),(5,'incapacitacion de empleado accidente maquina',15.00),(6,'materia prima llega tarde',20.00);
 /*!40000 ALTER TABLE `causa` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `maquina_tipo`
+--
+
+DROP TABLE IF EXISTS `maquina_tipo`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `maquina_tipo` (
+  `id` int(11) NOT NULL DEFAULT '0',
+  `tipo` varchar(999) NOT NULL DEFAULT '',
+  `cantidad` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `maquina_tipo`
@@ -36,6 +66,19 @@ INSERT INTO `maquina_tipo` VALUES (1,'cutters',2),(2,'molinos',1),(3,'embutidora
 UNLOCK TABLES;
 
 --
+-- Table structure for table `mes`
+--
+
+DROP TABLE IF EXISTS `mes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `mes` (
+  `mes` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`mes`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Dumping data for table `mes`
 --
 
@@ -44,6 +87,30 @@ LOCK TABLES `mes` WRITE;
 INSERT INTO `mes` VALUES (1),(2),(3),(4),(5),(6),(7),(8),(9),(10),(11),(12);
 /*!40000 ALTER TABLE `mes` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `parada`
+--
+
+DROP TABLE IF EXISTS `parada`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `parada` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_causa` int(11) NOT NULL DEFAULT '0',
+  `tiempo_horas` decimal(20,2) NOT NULL DEFAULT '0.00',
+  `tiempo_minutos` decimal(20,2) NOT NULL DEFAULT '0.00',
+  `id_maquina` int(11) NOT NULL DEFAULT '0',
+  `id_periodo` int(11) NOT NULL DEFAULT '0',
+  `mes` int(11) NOT NULL DEFAULT '0',
+  `tiempo_trabajado` decimal(20,2) NOT NULL DEFAULT '0.00',
+  PRIMARY KEY (`id`),
+  KEY `FK_parada_3` (`id_maquina`),
+  KEY `FK_parada_4` (`id_periodo`),
+  KEY `FK_parada_5` (`mes`),
+  KEY `FK_parada_1` (`id_causa`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=146 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `parada`
@@ -56,6 +123,19 @@ INSERT INTO `parada` VALUES (1,4,0.65,39.00,3,2016,11,11310.00),(2,2,0.75,45.00,
 UNLOCK TABLES;
 
 --
+-- Table structure for table `periodo`
+--
+
+DROP TABLE IF EXISTS `periodo`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `periodo` (
+  `periodo` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`periodo`)
+) ENGINE=InnoDB AUTO_INCREMENT=2021 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Dumping data for table `periodo`
 --
 
@@ -64,6 +144,20 @@ LOCK TABLES `periodo` WRITE;
 INSERT INTO `periodo` VALUES (2015),(2016),(2017),(2018),(2019),(2020);
 /*!40000 ALTER TABLE `periodo` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `problema`
+--
+
+DROP TABLE IF EXISTS `problema`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `problema` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `problema` varchar(999) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `problema`
@@ -76,6 +170,20 @@ INSERT INTO `problema` VALUES (1,'maquina se detiene');
 UNLOCK TABLES;
 
 --
+-- Table structure for table `problema_vs_causa`
+--
+
+DROP TABLE IF EXISTS `problema_vs_causa`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `problema_vs_causa` (
+  `id_problema` int(11) NOT NULL DEFAULT '0',
+  `id_causa` int(11) NOT NULL DEFAULT '0',
+  KEY `FK_problema_vs_causa_2` (`id_causa`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Dumping data for table `problema_vs_causa`
 --
 
@@ -84,6 +192,25 @@ LOCK TABLES `problema_vs_causa` WRITE;
 INSERT INTO `problema_vs_causa` VALUES (1,1),(1,2),(1,3),(1,4),(1,5);
 /*!40000 ALTER TABLE `problema_vs_causa` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `produccion`
+--
+
+DROP TABLE IF EXISTS `produccion`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `produccion` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `periodo` int(11) NOT NULL DEFAULT '0',
+  `mes` int(11) NOT NULL DEFAULT '0',
+  `cantidad` decimal(20,2) NOT NULL DEFAULT '0.00',
+  `nota` varchar(9999) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`),
+  KEY `FK_produccion_1` (`mes`),
+  KEY `FK_produccion_2` (`periodo`)
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `produccion`
@@ -104,4 +231,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-04-18 14:29:17
+-- Dump completed on 2017-04-18 14:33:34
