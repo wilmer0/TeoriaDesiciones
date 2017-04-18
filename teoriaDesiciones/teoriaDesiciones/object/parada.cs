@@ -18,15 +18,19 @@ namespace teoriaDesiciones
         public string maquina { get; set; }
         public int Periodo { get; set; }
         public int mes { get; set; }
+        public decimal tiempoTrabajado { get; set; }
+        public decimal tiempoFueraServicio { get; set; }
+        public decimal PorcientoTiempoFueraServicio { get; set; }
 
 
         utilidades utilidades=new utilidades();
+
         public List<parada> getListaParada()
         {
             List<parada> lista = new List<parada>();
             parada parada = new parada();
 
-            string sql = "select p.id,p.id_causa,p.tiempo_horas,p.tiempo_minutos,p.id_maquina,p.id_periodo,p.mes,mt.tipo,c.causa from parada p, maquina_tipo mt,causa c where p.id_maquina=mt.id  and c.id=p.id_causa order by p.id_periodo;";
+            string sql = "select p.id,p.id_causa,p.tiempo_horas,p.tiempo_minutos,p.id_maquina,p.id_periodo,p.mes,mt.tipo,c.causa,p.tiempo_trabajado from parada p, maquina_tipo mt,causa c where p.id_maquina=mt.id  and c.id=p.id_causa order by p.id_periodo;";
             DataSet ds = utilidades.ejecutarcomando_mysql(sql);
             foreach (DataRow row in ds.Tables[0].Rows)
             {
@@ -40,7 +44,11 @@ namespace teoriaDesiciones
                 parada.mes = Convert.ToInt32(row[6]);
                 parada.maquina= row[7].ToString();
                 parada.causa = row[8].ToString();
-
+                parada.tiempoTrabajado = Convert.ToDecimal(row[9]);
+                parada.tiempoFueraServicio = parada.tiempoMinutos ;
+                parada.PorcientoTiempoFueraServicio = Math.Round((parada.tiempoFueraServicio / parada.tiempoTrabajado)*100,2);
+                
+                
                 lista.Add(parada);
             }
 

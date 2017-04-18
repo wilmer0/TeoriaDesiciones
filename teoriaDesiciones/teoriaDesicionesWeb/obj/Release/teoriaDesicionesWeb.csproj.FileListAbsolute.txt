@@ -1,9 +1,3 @@
-C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesicionesWeb\bin\Release\teoriaDesicionesWeb.exe.manifest
-C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesicionesWeb\bin\Release\teoriaDesicionesWeb.xbap
-C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesicionesWeb\bin\Release\teoriaDesicionesWeb.exe
-C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesicionesWeb\bin\Release\teoriaDesicionesWeb.pdb
-C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesicionesWeb\bin\Release\teoriaDesiciones.pdb
-C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesicionesWeb\obj\Release\teoriaDesicionesWeb.csprojResolveAssemblyReference.cache
 C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesicionesWeb\obj\Release\Page1.baml
 C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesicionesWeb\obj\Release\Page1.g.cs
 C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesicionesWeb\obj\Release\App.g.cs
@@ -11,9 +5,3 @@ C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesicio
 C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesicionesWeb\obj\Release\teoriaDesicionesWeb.g.resources
 C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesicionesWeb\obj\Release\teoriaDesicionesWeb.Properties.Resources.resources
 C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesicionesWeb\obj\Release\teoriaDesicionesWeb.csproj.GenerateResource.Cache
-C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesicionesWeb\obj\Release\teoriaDesicionesWeb.TrustInfo.xml
-C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesicionesWeb\obj\Release\teoriaDesicionesWeb.exe.manifest
-C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesicionesWeb\obj\Release\teoriaDesicionesWeb.xbap
-C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesicionesWeb\obj\Release\teoriaDesicionesWeb.exe
-C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesicionesWeb\obj\Release\teoriaDesicionesWeb.pdb
-C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesicionesWeb\bin\Release\teoriaDesiciones.exe

@@ -40,7 +40,7 @@ namespace teoriaDesiciones.model
                 reporteteEncabezado.periodoFinal = periodoFinal;
                 reporteteEncabezado.cantidadParadas = listaParada.Where(x=> x.id > 0 ).Count();
                 reporteteEncabezado.cantidadMaquinasParadas = listaParada.Distinct().Count();
-                reporteteEncabezado.produccionPromedioMensual = Math.Round((listaProduccion.Average(x => x.cantidad)),4);
+                reporteteEncabezado.produccionPromedioMensual = Math.Round((listaProduccion.Average(x => x.cantidad)),2);
                 reporteteEncabezado.cantidadMaquinasParadas = (from p in listaParada
                              where !(from ex in listaParada select ex.idTipoMaquina).Contains(p.idTipoMaquina)
                              select p).ToList().Count;
@@ -69,14 +69,16 @@ namespace teoriaDesiciones.model
                     reporteDetalle.periodo = x.periodo;
                     reporteDetalle.mes = x.mes;
                     reporteDetalle.mesNombre = listaMes[x.mes];
-                    reporteDetalle.variacionProduccion = Math.Round((x.cantidad/reporteteEncabezado.produccionPromedioMensual),4);
+                    reporteDetalle.variacionProduccion = Math.Round((x.cantidad/reporteteEncabezado.produccionPromedioMensual),2);
                     reporteDetalle.paradas = listaParada.Where(p => p.Periodo == x.periodo && p.mes == x.mes).Count();
-                    reporteDetalle.promedioHorasParada = Math.Round((listaParada.Where(p => p.Periodo == x.periodo && p.mes == x.mes).Average(v => v.tiempoHoras)),4);
+                    reporteDetalle.promedioHorasParada = Math.Round((listaParada.Where(p => p.Periodo == x.periodo && p.mes == x.mes).Average(v => v.tiempoHoras)),2);
                     reporteDetalle.promedioMinutosParada = Math.Round(listaParada.Where(p => p.Periodo == x.periodo && p.mes == x.mes).Average(v => v.tiempoMinutos), 4);
                     reporteDetalle.nota = listaProduccion.Where(p => p.periodo == x.periodo && p.mes == x.mes).FirstOrDefault().nota;
                     reporteDetalle.idCausa = listaParada.Where(p => p.Periodo == x.periodo && p.mes == x.mes).FirstOrDefault().idCausa;
                     reporteDetalle.causa = causa.getNombreCaudaById(reporteDetalle.idCausa);
                     reporteDetalle.cantidadProduccion = x.cantidad;
+                    reporteDetalle.tiempoTrabajoMaquina = Math.Round((listaParada.Where(p => p.Periodo == x.periodo && p.mes == x.mes).Sum(v=> v.tiempoTrabajado)), 2);
+                    reporteDetalle.PorcientoTiempoFueraServicio = Math.Round((listaParada.Where(p => p.Periodo == x.periodo && p.mes == x.mes).Sum(v => v.PorcientoTiempoFueraServicio)), 2);
                     
                     listaDetalle.Add(reporteDetalle);
                 }

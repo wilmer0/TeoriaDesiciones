@@ -88,9 +88,8 @@ namespace teoriaDesiciones.views
                 periodoInicial = Convert.ToInt32(periodoInicialCombo.Text);
                 periodoFinal = Convert.ToInt32(periodoFinalCombo.Text);
 
-
-                string sql = "truncate table parada;";
-                utilidades.ejecutarcomando_mysql(sql);
+                string sql = "";
+                //utilidades.ejecutarcomando_mysql(sql);
                 //recorriendo los periodos
                 for (int s = 0; s < 50; s++)
                 {
@@ -116,9 +115,13 @@ namespace teoriaDesiciones.views
                                         {
                                             double tiempoHoras = 0;
                                             double tiempoMinutos = 0;
-                                            tiempoMinutos = utilidades.getNumeroRandom(5, 60);
+                                            decimal tiempoTrabajado = 0;
+                                            sql = "select max(tiempo_trabajado) from parada;";
+                                            DataSet ds = utilidades.ejecutarcomando_mysql(sql);
+                                            tiempoTrabajado = Convert.ToDecimal(ds.Tables[0].Rows[0][0]);
+                                            tiempoMinutos = utilidades.getNumeroRandom((Convert.ToInt32(100)), (Convert.ToInt32(tiempoTrabajado)));
                                             tiempoHoras = Math.Round((tiempoMinutos/60), 2);
-                                            sql ="insert into parada(id_problema,tiempo_horas,tiempo_minutos,id_maquina,id_periodo,mes) values('1','" +tiempoHoras + "','" + tiempoMinutos + "','" + rowMaquina[0].ToString() + "','" + p + "','" + m + "');";
+                                            sql = "insert into parada(id_causa,tiempo_horas,tiempo_minutos,id_maquina,id_periodo,mes,tiempo_trabajado) values('" + dsCausa.Tables[0].Rows[0][0].ToString() + "','" + tiempoHoras + "','" + tiempoMinutos + "','" + rowMaquina[0].ToString() + "','" + p + "','" + m + "','" + utilidades.getNumeroRandom(Convert.ToInt32(tiempoTrabajado - 500), Convert.ToInt32(tiempoTrabajado)) + "');";
                                             utilidades.ejecutarcomando_mysql(sql);
                                         }
                                     }

@@ -20,7 +20,7 @@ namespace teoriaDesiciones
         public string causa { get; set; }
         public decimal cantidadProduccion { get; set; }
         public decimal tiempoTrabajoMaquina { get; set; }
-        public decimal tiempoFueraServicioPorciento { get; set; }
+        public decimal PorcientoTiempoFueraServicio { get; set; }
         public decimal tiempoFueraServicio { get; set; }
 
     }
