@@ -154,6 +154,10 @@ namespace teoriaDesiciones.views
             {
                 reporteGeneral = true;
             }
+            else
+            {
+                reporteGeneral = false;
+            }
 
             modeloReporte.GetReporte(periodoInicial,periodoFinal,reporteGeneral);
         }

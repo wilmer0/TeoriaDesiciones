@@ -32,7 +32,7 @@
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.41667in</Height>
+              <Height>0.53125in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -168,6 +168,20 @@
                           <TextRuns>
                             <TextRun>
                               <Value>PRODUCCION</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>(LBS)</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -709,6 +723,7 @@
                               <Value>=Fields!promedioMinutos.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
+                                <Format>0.00;(0.00)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1293,6 +1308,7 @@
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
+                                <Format>#,0.00;(#,0.00)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1309,7 +1325,6 @@
                         </Border>
                         <TopBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
                           <Width>1pt</Width>
                         </TopBorder>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -1392,7 +1407,7 @@
         <DataSetName>reporte_detalle</DataSetName>
         <Top>0.46181in</Top>
         <Left>0.13417in</Left>
-        <Height>1.16667in</Height>
+        <Height>1.28125in</Height>
         <Width>8.07291in</Width>
         <Style>
           <Border>
