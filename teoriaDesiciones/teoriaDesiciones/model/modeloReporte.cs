@@ -71,12 +71,13 @@ namespace teoriaDesiciones.model
                     reporteDetalle.mesNombre = listaMes[x.mes];
                     reporteDetalle.variacionProduccion = Math.Round((x.cantidad/reporteteEncabezado.produccionPromedioMensual),4);
                     reporteDetalle.paradas = listaParada.Where(p => p.Periodo == x.periodo && p.mes == x.mes).Count();
-                    reporteDetalle.promedioHoras = Math.Round((listaParada.Where(p => p.Periodo == x.periodo && p.mes == x.mes).Average(v => v.tiempoHoras)),4);
-                    reporteDetalle.promedioMinutos = Math.Round(listaParada.Where(p => p.Periodo == x.periodo && p.mes == x.mes).Average(v => v.tiempoMinutos), 4);
+                    reporteDetalle.promedioHorasParada = Math.Round((listaParada.Where(p => p.Periodo == x.periodo && p.mes == x.mes).Average(v => v.tiempoHoras)),4);
+                    reporteDetalle.promedioMinutosParada = Math.Round(listaParada.Where(p => p.Periodo == x.periodo && p.mes == x.mes).Average(v => v.tiempoMinutos), 4);
                     reporteDetalle.nota = listaProduccion.Where(p => p.periodo == x.periodo && p.mes == x.mes).FirstOrDefault().nota;
                     reporteDetalle.idCausa = listaParada.Where(p => p.Periodo == x.periodo && p.mes == x.mes).FirstOrDefault().idCausa;
                     reporteDetalle.causa = causa.getNombreCaudaById(reporteDetalle.idCausa);
                     reporteDetalle.cantidadProduccion = x.cantidad;
+                    
                     listaDetalle.Add(reporteDetalle);
                 }
 

@@ -13,11 +13,15 @@ namespace teoriaDesiciones
         public string mesNombre { get; set; }
         public decimal variacionProduccion { get; set; }
         public int paradas { get; set; }
-        public decimal promedioHoras { get; set; }
-        public decimal promedioMinutos { get; set; }
+        public decimal promedioHorasParada { get; set; }
+        public decimal promedioMinutosParada { get; set; }
         public string nota { get; set; }
         public int idCausa { get; set; }
         public string causa { get; set; }
         public decimal cantidadProduccion { get; set; }
+        public decimal tiempoTrabajoMaquina { get; set; }
+        public decimal tiempoFueraServicioPorciento { get; set; }
+        public decimal tiempoFueraServicio { get; set; }
+
     }
 }
