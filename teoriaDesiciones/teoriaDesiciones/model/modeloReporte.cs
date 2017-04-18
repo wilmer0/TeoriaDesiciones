@@ -78,14 +78,11 @@ namespace teoriaDesiciones.model
                     reporteDetalle.causa = causa.getNombreCaudaById(reporteDetalle.idCausa);
                     reporteDetalle.cantidadProduccion = x.cantidad;
                     reporteDetalle.tiempoTrabajoMaquina = Math.Round((listaParada.Where(p => p.Periodo == x.periodo && p.mes == x.mes).Sum(v=> v.tiempoTrabajado)), 2);
-                    reporteDetalle.PorcientoTiempoFueraServicio = Math.Round((listaParada.Where(p => p.Periodo == x.periodo && p.mes == x.mes).Sum(v => v.PorcientoTiempoFueraServicio)), 2);
-                    
+                    reporteDetalle.PorcientoTiempoFueraServicio = Math.Round((listaParada.Where(p => p.Periodo == x.periodo && p.mes == x.mes).Sum(v => v.PorcientoTiempoFueraServicioMinutos)), 2);
+                    reporteDetalle.tiempoFueraServicioMinutos = Math.Round((listaParada.Where(p => p.Periodo == x.periodo && p.mes == x.mes).Sum(v => v.tiempoFueraServicio)), 2);
+                    reporteDetalle.tiempoFueraServicioHoras = Math.Round((reporteDetalle.tiempoFueraServicioMinutos/60),2);                    
                     listaDetalle.Add(reporteDetalle);
                 }
-
-
-
-
 
 
                 //llamando el reporte

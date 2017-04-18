@@ -2684,38 +2684,38 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Chart Name="Chart4">
+      <Chart Name="Chart6">
         <ChartCategoryHierarchy>
           <ChartMembers>
             <ChartMember>
-              <Group Name="Chart4_CategoryGroup">
+              <Group Name="Chart6_CategoryGroup">
                 <GroupExpressions>
-                  <GroupExpression>=Fields!idCausa.Value</GroupExpression>
+                  <GroupExpression>=Fields!causa.Value</GroupExpression>
                 </GroupExpressions>
               </Group>
               <SortExpressions>
                 <SortExpression>
-                  <Value>=Fields!idCausa.Value</Value>
+                  <Value>=Fields!causa.Value</Value>
                 </SortExpression>
               </SortExpressions>
-              <Label>=Fields!idCausa.Value</Label>
+              <Label>=Fields!causa.Value</Label>
             </ChartMember>
           </ChartMembers>
         </ChartCategoryHierarchy>
         <ChartSeriesHierarchy>
           <ChartMembers>
             <ChartMember>
-              <Label>tiempo Fuera Servicio Porciento</Label>
+              <Label>tiempo Fuera Servicio</Label>
             </ChartMember>
           </ChartMembers>
         </ChartSeriesHierarchy>
         <ChartData>
           <ChartSeriesCollection>
-            <ChartSeries Name="tiempoFueraServicioPorciento">
+            <ChartSeries Name="tiempoPorcientoFueraServicios">
               <ChartDataPoints>
                 <ChartDataPoint>
                   <ChartDataPointValues>
-                    <Y>=Sum(Fields!tiempoFueraServicioPorciento.Value)</Y>
+                    <Y>=math.Round(Sum((Fields!tiempoFueraServicio.Value)/60)/(math.Round(Sum(Fields!tiempoFueraServicio.Value,"reporte_detalle_parada")/60,2)),2)</Y>
                   </ChartDataPointValues>
                   <ChartDataLabel>
                     <Style />
@@ -2729,7 +2729,6 @@
                   <DataElementOutput>Output</DataElementOutput>
                 </ChartDataPoint>
               </ChartDataPoints>
-              <Type>Shape</Type>
               <Style />
               <ChartEmptyPoints>
                 <Style />
@@ -2757,7 +2756,7 @@
                   <FontSize>8pt</FontSize>
                 </Style>
                 <ChartAxisTitle>
-                  <Caption>Título del eje</Caption>
+                  <Caption>CAUSAS</Caption>
                   <Style>
                     <FontSize>8pt</FontSize>
                   </Style>
@@ -2832,7 +2831,7 @@
                   <FontSize>8pt</FontSize>
                 </Style>
                 <ChartAxisTitle>
-                  <Caption>Título del eje</Caption>
+                  <Caption>TIEMPO(HORAS)</Caption>
                   <Style>
                     <FontSize>8pt</FontSize>
                   </Style>
@@ -2924,7 +2923,7 @@
         </ChartLegends>
         <ChartTitles>
           <ChartTitle Name="Default">
-            <Caption>PORCIENTOS TIEMPO FUERA DE SERVICIO POR CAUSA</Caption>
+            <Caption>TIEMPOS PORCIENTOS FUERA DE SERVICIO POR CAUSAS</Caption>
             <Style>
               <BackgroundGradientType>None</BackgroundGradientType>
               <FontWeight>Bold</FontWeight>
@@ -2949,10 +2948,10 @@
             <VerticalAlign>Top</VerticalAlign>
           </Style>
         </ChartNoDataMessage>
-        <DataSetName>reporte_detalle</DataSetName>
-        <Top>10.37848in</Top>
+        <DataSetName>reporte_detalle_parada</DataSetName>
+        <Top>10.42708in</Top>
         <Left>0.13417in</Left>
-        <Height>3.29167in</Height>
+        <Height>2.64583in</Height>
         <Width>8.02653in</Width>
         <ZIndex>9</ZIndex>
         <Style>
@@ -2964,6 +2963,74 @@
           <BackgroundGradientType>None</BackgroundGradientType>
         </Style>
       </Chart>
+      <Textbox Name="Textbox23">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=math.Round(Sum(Fields!tiempoFueraServicio.Value,"reporte_detalle_parada")/60,2)</Value>
+                <Style>
+                  <Format>#,0.00;(#,0.00)</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox23</rd:DefaultName>
+        <Top>13.10069in</Top>
+        <Left>6.67112in</Left>
+        <Height>0.25in</Height>
+        <Width>1.48958in</Width>
+        <ZIndex>10</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox25">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>TOTAL HORAS FUERA DE SERVICIO:</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox25</rd:DefaultName>
+        <Top>13.10069in</Top>
+        <Left>3.46876in</Left>
+        <Height>0.25in</Height>
+        <Width>3.18847in</Width>
+        <ZIndex>11</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
     <Height>25.81598in</Height>
     <Style />
@@ -3535,6 +3602,10 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
+        <Field Name="causa">
+          <DataField>causa</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="id">
           <DataField>id</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
@@ -3559,12 +3630,24 @@
           <DataField>Periodo</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
+        <Field Name="tiempoFueraServicio">
+          <DataField>tiempoFueraServicio</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
         <Field Name="tiempoHoras">
           <DataField>tiempoHoras</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
         <Field Name="tiempoMinutos">
           <DataField>tiempoMinutos</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="tiempoPorcientoFueraServicios">
+          <DataField>tiempoPorcientoFueraServicios</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="tiempoTrabajado">
+          <DataField>tiempoTrabajado</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
       </Fields>

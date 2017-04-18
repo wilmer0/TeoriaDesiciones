@@ -20,8 +20,8 @@ namespace teoriaDesiciones
         public int mes { get; set; }
         public decimal tiempoTrabajado { get; set; }
         public decimal tiempoFueraServicio { get; set; }
-        public decimal PorcientoTiempoFueraServicio { get; set; }
-
+        public decimal PorcientoTiempoFueraServicioMinutos { get; set; }
+        public decimal PorcientoTiempoFueraServicioHoras { get; set; }
 
         utilidades utilidades=new utilidades();
 
@@ -46,13 +46,17 @@ namespace teoriaDesiciones
                 parada.causa = row[8].ToString();
                 parada.tiempoTrabajado = Convert.ToDecimal(row[9]);
                 parada.tiempoFueraServicio = parada.tiempoMinutos ;
-                parada.PorcientoTiempoFueraServicio = Math.Round((parada.tiempoFueraServicio / parada.tiempoTrabajado)*100,2);
-                
+                //parada.PorcientoTiempoFueraServicioMinutos = Math.Round((parada.tiempoFueraServicio / tiempoFueraServicioMinutosTotal)*100,2);
+                parada.PorcientoTiempoFueraServicioHoras = Math.Round((parada.PorcientoTiempoFueraServicioMinutos/60),2);
                 
                 lista.Add(parada);
             }
 
-
+            decimal tiempoFueraServicioMinutosTotal = Math.Round(lista.Sum(s => s.tiempoFueraServicio), 2);
+            foreach (var x in lista)
+            {
+                x.PorcientoTiempoFueraServicioMinutos = Math.Round((parada.tiempoFueraServicio / tiempoFueraServicioMinutosTotal) * 100, 2);
+            }
 
             return lista;
         }

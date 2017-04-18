@@ -1,3 +1,7 @@
+C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesiciones\bin\Release\teoriaDesiciones.exe.config
+C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesiciones\bin\Release\teoriaDesiciones.exe
+C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesiciones\bin\Release\teoriaDesiciones.pdb
+C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesiciones\bin\Release\MySql.Data.dll
 C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesiciones\obj\Release\teoriaDesiciones.report.VisorReporteComun.resources
 C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesiciones\obj\Release\teoriaDesiciones.Form1.resources
 C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesiciones\obj\Release\teoriaDesiciones.Properties.Resources.resources
@@ -5,9 +9,5 @@ C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesicio
 C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesiciones\obj\Release\teoriaDesiciones.csproj.GenerateResource.Cache
 C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesiciones\obj\Release\RdlCompile.cache
 C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesiciones\obj\Release\RdlCompile.compiled
-C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesiciones\bin\Release\teoriaDesiciones.exe.config
-C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesiciones\bin\Release\teoriaDesiciones.exe
-C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesiciones\bin\Release\teoriaDesiciones.pdb
-C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesiciones\bin\Release\MySql.Data.dll
 C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesiciones\obj\Release\teoriaDesiciones.exe
 C:\Users\wilmer\Documents\GitHub\TeoriaDesiciones\teoriaDesiciones\teoriaDesiciones\obj\Release\teoriaDesiciones.pdb

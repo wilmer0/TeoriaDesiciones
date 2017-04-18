@@ -21,7 +21,9 @@ namespace teoriaDesiciones
         public decimal cantidadProduccion { get; set; }
         public decimal tiempoTrabajoMaquina { get; set; }
         public decimal PorcientoTiempoFueraServicio { get; set; }
-        public decimal tiempoFueraServicio { get; set; }
+        public decimal tiempoFueraServicioMinutos { get; set; }
+        public decimal tiempoFueraServicioHoras { get; set; }
+
 
     }
 }
